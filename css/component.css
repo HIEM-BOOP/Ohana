@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: #f7346f;
+  --light-primary: white; 
+  --secondary-color: #0f88a1;
+  --success-color: #1EDB4C;
+  --warn-color: #ffab1d;
+  --price-Color : #F73486;
+  --information-color: #666666;
+}
+
+body {
+  position: relative;
+}
+
+/* button */
+
+.btn {
+  color: white;
+  padding: 15px 20px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Màu btn*/
+.btn-primary{
+    color: white;
+    background-color: var(--primary-color);
+}
+.btn-secondary{
+    color: white;
+    background-color: var(--secondary-color);
+}
+.btn-success{
+    color: white;
+    background-color: var(--success-color);
+}
+.btn-warn{
+    color: white;
+    background-color: var(--warning-color);
+}
+
+.btn-solid-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+.btn-solid-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+.btn-solid-success{
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+.btn-warn{
+    background-color: var(--warn-color);
+    border-color: var(--warn-color);
+    color: white;
+}
+
+.btn-outline-secondary{
+  background-color: white;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  border-radius: 20px;
+}
+/* size */
+
+.btn-small {
+    padding: 5 px 10px;
+
+}
+.btn-medium {
+     padding: 7px 15px;
+
+}
+.btn-large{
+    padding: 15px 20px;
+}
+
+/* input */
+
+.input{
+    width: 100%;
+    
+}
+.fs-16{
+  font-size: 16px;  
+}
+.fs-20{
+  font-size: 20px;
+}
+.fs-24{
+  font-size: 24px;
+  font-weight: 400px;
+  color: #333333;
+}
+.fs-48{
+  font-size: 48px;
+}
+.fw-400{
+  font-weight: 400px;
+}
+.cl-secondary{
+  color: var(--secondary-color);
+}
+.cl-price{
+  color: var(--price-Color);
+}
+.cl-information{
+  color: var(--information-color);
+}

@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito-SemiBold";
+  text-decoration: none;
+}
+body {
+  background-color: #f6f5f2;
+}
+i span {
+  padding: 5px;
+}
+header {
+  margin: 0 auto;
+  border: 0 solid #dddddd;
+  color: var(--light-color);
+}
+.hd_menu {
+  background-color: var(--primary-color);
+  font-size: 16px;
+  color: white;
+  width: 100vw;
+}
+.khung_menu {
+  /* width: 1440px; */
+  width: 70%;
+  margin: 0 auto;
+  text-align: right;
+  padding: 10px;
+}
+.khung_menu i {
+  padding: 0 30px;
+}
+.icon_sh i {
+  color: var(--primary-color);
+}
+.khung_LG1 {
+  width: 100%;
+  /* display: flex; */
+  padding: 10px;
+  background-color: white;
+  /* -webkit-box-shadow: 0 8px 6px -6px black; */
+  /* -moz-box-shadow: 0 8px 6px -6px black; */
+  box-shadow: 0 8px 6px -6px black;
+}
+.khung_LG2 {
+  width: 70%;
+  /* display: flex; */
+  /* flex-direction:row; */
+  margin: 0 auto;
+}
+.khung_LG-sh {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.khung_sh {
+  display: flex;
+  margin-left: 20px;
+  border: 1px solid#dddddd;
+  border-radius: 35px;
+  padding: 10px;
+}
+#tinhThanh {
+  border: 0;
+  border-right: 1px solid #b4b4b4;
+  align-items: center;
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+#search {
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  color: #8f8f8f;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+main {
+  width: 1440px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "Item-left Item-right Item-right Item-right Item-right";
+  grid-gap: 20px;
+}
+.left_frame {
+  margin-top: 12px;
+  grid-area: Item-left;
+}
+.left_frame ul {
+  list-style: none;
+  background-color: var(--light-primary);
+  border: 0px solid dodgerblue;
+  border-radius: 15px;
+}
+main:first-child {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.left_frame > ul > li {
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.left_frame > ul > li:first-child {
+  padding: 32px 32px 32px 32px;
+  display: flex;
+  align-items: center;
+}
+.left_frame > ul > li:last-child {
+  padding: 32px 32px 32px 32px;
+}
+.left_frame > ul > li:first-child {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.left_frame > ul > li:nth-child(2),
+.left_frame > ul > li:nth-child(3),
+.left_frame > ul > li:nth-child(4),
+.left_frame > ul > li:nth-child(5) {
+  padding: 16px 16px 16px 32px;
+  margin-top: 2px;
+  background-color: #f6f7f9;
+}
+.right_frame {
+  margin-top: 12px;
+  padding: 40px;
+  grid-area: Item-right;
+  background-color: var(--light-primary);
+  border-radius: 15px;
+}
+.right_frame > span:first-child {
+  padding: 0 0 22px;
+}
+.khungDanhSachPhongTro {
+  display: flex;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 22px 0 22px 0;
+  width: 885px;
+}
+.anh {
+  position: relative;
+  width: 216px;
+  margin-right: 20px;
+}
+.anh img {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+}
+.fr_chiTiet {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+.fr_chiTiet > span {
+  padding: 10px 0;
+}
+.kieuPhong,
+.diaChi {
+  display: block;
+}
+.tTgia:last-child {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.kieuPhong .gioiTinh .dienTich .diaChi {
+  margin: 0px 32px 0 0;
+}
+footer {
+  background-color: white;
+}
+.fr {
+  width: 1440px;
+  margin: 0 auto;
+}
+.fe_center {
+  /* display: flex; */
+}
+.fe_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed #cdcdcd;
+  padding:50px 0px ;
+}
+.fr_dow {
+  align-items: center;
+}
+.fr_title a ,.fr_tt a{
+    color:black;
+    
+}
+.fr_day{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
