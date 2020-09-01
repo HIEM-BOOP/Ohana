@@ -1,93 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OHANA</title>
-    <script src="js/service/RoomService.js"></script>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="css/component.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chi tiết phòng</title>
+        <script src="js/service/RoomService.js"></script>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="css/component.css">
+        <link rel="stylesheet" href="css/style1.css">
+        <script src="https://kit.fontawesome.com/b7a754bad9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic">
+    </head>
 
-<body>
-    <header>
-        <div class="header">
-            <div class="hRight">
-                <div class="item"><a href="#"></img src="img/baseline_house_white_18dp.png" alt="">Tải APP</a></div>
-                <div class="item"><a href="#"><img src="img/baseline_house_white_18dp.png" alt="">Đăng phòng dễ dàng</a>
+    <body>
+        <!-- Phần header -->
+        <header>
+            <!-- Tạo Hai div chứa Tải APP và Đăng phòng dễ dàng -->
+            <div class="hd_menu">
+                <div class="khung_menu">
+                    <i class="fas fa-download"><span class="download">Tải APP</span></i>
+                    <i class="fas fa-home"><span class="icon_home">Đăng phòng dễ dàng </span></i>
                 </div>
             </div>
-        </div>
-        <div class="section">
-            <div class="chuaCacThanh">
-                <div class="thanh">
-                    <a href="#"><img src="https://www.ohanaliving.vn/8cc95480cbd2708db10ad4b8de56306a.svg"
-                            alt="Ohana"></a>
-                    <div class="khungTimKiem">
-                        <div class="timKiem">
-                            <select name="cars" id="cars">
-                                <option value="volvo">Hà Nội</option>
-                                <option value="saab">TP HCM</option>
-                                <input type="search" id="search" placeholder="Search..." />
-                            </select>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </header>
-    <main>
-        <div class="main">
-            <div class="khungChuaBoLoc">
-                <div class="khungboLoc">
-
-                    <div class="boloc">
-                        <span class="bl">Bộ Lọc</span>
-                        <div class="apDung">
-                            <div class="ad">
-                                <span class="aptitle">Áp Dụng</span>
+            <!-- Phần dưới chứa các logo và các thanh tìm kiếm -->
+            <div class="khung_LG1">
+                <!-- khung ngoài -->
+                <div class="khung_LG2">
+                    <div class="khung_LG-sh">
+                        <div class="loGo"><img src="https://www.ohanaliving.vn/8cc95480cbd2708db10ad4b8de56306a.svg"
+                                alt="#"></div>
+                        <!-- Khung tìm kiếm và nới trong 2 tỉnh thành -->
+                        <div class="khung_sh ">
+                            <div class="sh_left">
+                                <i class="fas fa-map-marker-alt" style="color:var(--primary-color);"> <select
+                                        name="tinhThanh" id="tinhThanh">
+                                        <option value="TP.HCM">TP.HCM</option>
+                                        <option value="TP Hà Nội">TP Hà Nội</option>
+                                    </select></i>
+                            </div>
+                            <div class="sh_right">
+                                <input type="search" id="search"
+                                    placeholder="Tìm kiếm theo địa điểm, quận , tên đường...">
+                            </div>
+                            <div class="icon_sh">
+                                <span><i class="fas fa-search-location"></i></span>
                             </div>
                         </div>
                     </div>
-                    <!-- -------------------- -->
-                    <div class="giabl">
-                        span.
-                    </div>
-                    <div class="tienIchbl"></div>
-                    <div class="loaiPhongBl"></div>
-                    <div class="gioiTinhBl"></div>
                 </div>
             </div>
-            <div class="hienThiDanhSach">
-                <div class="ketQua">Kết Quả</div>
-                <div class="phong">
-                    <div class="anh"><a href="#"><img
-                                src="https://bayleaf.s3.amazonaws.com/property-images%2F1576232901209_IMG_4620.JPG"
-                                alt=""></a></div>
-                    <div class="khungChuaThongTin">
-                        <div class="KhungChiTietPhong">
-                            <p class="title ">Phòng ở ghép Đinh Bộ Lĩnh, Quận Bình Thạnh</p>
-                            <div class="chiTiet">
-                                <div class="kieuPhong">Phong ở ghép</div>
-                                <div class="gioiTinh">Nam</div>
-                                <div class="dienTich">40m2</div>
-                                <div class="diaChi">139 Đinh Bộ Lĩnh , Quận Bình Thành</div>
+
+        </header>
+
+        <!-- Phần Main -->
+        <section>
+            <div class="images">
+                <div style="background: url(https://bayleaf.s3.amazonaws.com/property-images%2F1571995911662_AA0E7D6D-01F6-4783-B8E4-826F06887144.JPG) no-repeat center center/cover;"
+                    class="image">
+                </div>
+
+                <div style="background: url(https://bayleaf.s3.amazonaws.com/property-images%2F1571995911662_AA0E7D6D-01F6-4783-B8E4-826F06887144.JPG) no-repeat center center/cover;"
+                    class="image">
+                </div>
+
+
+                <div style="background: url(https://bayleaf.s3.amazonaws.com/property-images%2F1571995911662_AA0E7D6D-01F6-4783-B8E4-826F06887144.JPG) no-repeat center center/cover;"
+                    class="image">
+                </div>
+
+                <div class="image">
+                </div>
+                <div class="image">
+                </div>
+
+
+            </div>
+            <div class="khungThongTinTenAnh">
+                <div class="tenAnh">
+                    <div class="title1" style="width: 800px;">
+                        <h1 itemprop="name" class="Vg-MA fs-32 mb-6">Phòng cho thuê Nguyễn thiện thuật, Quận Bình Thạnh
+                        </h1>
+                    </div>
+                    <div class="title2">
+                        <button class="btn btn-secondary fs-20 cl-light pd-5"><i class="fas fa-share-alt"></i>chia
+                            sẻ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <!-- left_frame -->
+                <div class="price_left">
+                    <div class="item1">
+                        <div class="khungTTPhong khungTTChuTro">
+                            <div class="thongTinPhong thongTinChuTro">
+                                <div class="icon cl-primary"><i class="fas fa-home"></i></div>
+                                <span class="ttct fs-32 fw-400">
+                                    Thông tin phòng
+                                </span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="_2zScZ fs-16 cl-information">
+                            <div class="_70zUr">
+                                <p>Giá phòng</p>
+                                <p>5,500,000 đồng</p>
+                            </div>
+                            <div class="_70zUr">
+                                <p>Diện tích</p>
+                                <p>25 mét vuông</p>
+                            </div>
+                            <div class="_70zUr">
+                                <p>Đặt cọc</p>
+                                <p>1 tháng</p>
+                            </div>
+                            <div class="_70zUr">
+                                <p>Sức chứa</p>
+                                <p>2 Nam hoặc Nữ</p>
+                            </div>
+                        </div>
+                        <div class="_2zScZ fs-16 cl-information">
+                            <div class="_70zUr">
+                                <p>Điện</p>
+                                <p>3,500 đồng</p>
+                            </div>
+                            <div class="_70zUr">
+                                <p>Nước</p>
+                                <p>100,000 đồng</p>
+                            </div>
+                            <div class="_70zUr">
+                                <p>Wifi</p>
+                                <p>Miễn phí</p>
+                            </div>
+                            <div class="_70zUr">
+                                <p>Trạng thái</p>
+                                <p class="_3MSO3 fw-400 ">Còn phòng</p>
+                            </div>
+                        </div>
+                        <div class="_3QS8q fs-16 cl-information">
+                            <p>Điạ chỉ</p>
+                            <p>487 Điện Biên Phủ Mặt Tiền, Phường 25, Quận Bình Thạnh, Hồ Chí Minh</p>
+                        </div>
+                    </div>
+                    <!-- Tiện ÍCh -->
+                    <div class="item3">
+                        <div class="KhungTTTienIch khungTTChuTro">
+                            <div class="thongTinTienIch thongTinChuTro">
+                                <div class="icon cl-primary"><i class="fas fa-couch"></i>
+
+                                </div>
+                                <span class="ttti fs-32 fw-400">
+                                    Thông tin tiện ích
+                                </span>
+                            </div>
+                        </div>
+                        <div class="khungChiTietTienICh">
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch"
+                                    style="color: rgb(102, 102, 102); font-size: 32px;""><i class=" fas
+                                    fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                    class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                            class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                                    class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                    class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                            class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                                    class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                                            class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                                                    class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                                                            class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                    class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
+                            </div>
+                            <div class="chiTietTienIch">
+                                <span class="icon_tienIch" style="color: rgb(102, 102, 102); font-size: 32px;""><i 
+                                    class=" fas fa-fan"></i></span>
+                                <span class="name fs-16 cl-information lh-24">Máy lạnh</span>
                             </div>
                         </div>
                     </div>
-                    <div class="khunggia">
-                        <span class="gia">1,5</span>
-                      <div class="nguoi">  <span class="trieuNguoi">Tr/Người</span>
-                    </div></div>
+                    <div class="item4">
+                        <div class="KhungLuuY khungTTChuTro">
+                            <div class="ttLuuY thongTinChuTro">
+                                <div class="icon cl-primary"><i class="fas fa-exclamation"></i></div>
+                                <span class="tttluuy fs-32 fw-400">Lưu ý</span>
+                            </div>
+                        </div>
+
+                        <div class="khungTienich">
+                            <div class="title">
+                                <span class="fs-20">Tiện ích</span>
+                            </div>
+
+                            <div class="khungThoiGian">
+                                <span class="icon_time"><i class="fas cl-success fa-stopwatch"></i></span>
+                                <span class="thoiGian fs-16">00:00 Sáng 00:00 Tối</span>
+                            </div>
+                        </div>
+
+                        <!-- Sức Chứa -->
+                        <div class="title">
+                            <span class="fs-20">Sức chứa</span>
+                        </div>
+
+                        <div class="sucChua">
+                            <div class="itemsc">
+                                <p class="fs-16">Rộng</p>
+                                <div class="btn btn-secondary btn-large fs-16">1 Người</div>
+                            </div>
+                            <div class="itemsc">
+                                <p class="fs-16">Vừa</p>
+                                <div class="btn btn-success btn-large fs-16">1 Người</div>
+                            </div>
+                            <div class="itemsc">
+                                <p class="fs-16">Chật</p>
+                                <div class="btn btn-warn btn-large fs-16">1 Người</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item5">Footer</div>
+
                 </div>
+                <!-- right_frame -->
+                <div class="price_right">
+                    <!-- Title chủ trọ -->
+                    <div class="khungTTChuTro">
+                        <div class="thongTinChuTro">
+                            <div class="icon cl-secondary"><i class="fas fa-user"></i></div>
+                            <span class="ttct fs-32 fw-400">
+                                Thông tin chủ phòng
+                            </span>
+                        </div>
+                        <div class="khungThongTinChiTietTuoiTro">
+                            <div class="_3YtkH"><img
+                                    src="https://s120.avatar.talk.zdn.vn/7/1/9/3/1/120/843896368437a5af2e9bb2bc3b8d1468.jpg"
+                                    alt="avatar" class="_1Ad8s">
+                                <div class="thongTinChiTiet"><span>裴海英</span>
+                                    <div class="sdt"><span>SĐT: </span><span>0906277296</span></div>
+                                </div>
+                                <div class="thongTinNgayDang">
+                                    <div class="sdt"><span>Ngày đăng:&nbsp;</span><span>31-08-2020</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             </div>
-    </main>
-    <footer></footer>
+
+        </section>
+
+
+        <!-- Phần 
+        
+    <footer></
+        
 </body>
 
 </html>

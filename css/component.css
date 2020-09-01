@@ -10,19 +10,25 @@
   --warn-color: #ffab1d;
   --price-Color : #F73486;
   --information-color: #666666;
+  --black-color: rgb(94,50,94);
 }
 
 body {
   position: relative;
 }
+/* mark */
 
+.mark {
+  background-color: black:
+  opacity: 0.5px;
+}
 /* button */
 
 .btn {
   color: white;
   padding: 15px 20px;
   background-color: var(--primary-color);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 /* Màu btn*/
@@ -49,11 +55,12 @@ body {
   color: white;
 }
 .btn-solid-secondary {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    color: white;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
 }
 .btn-solid-success{
+
     background-color: var(--success-color);
     border-color: var(--success-color);
     color: white;
@@ -73,15 +80,15 @@ body {
 /* size */
 
 .btn-small {
-    padding: 5 px 10px;
+    padding: 3 px 10px;
 
 }
 .btn-medium {
-     padding: 7px 15px;
+     padding: 5px 15px;
 
 }
 .btn-large{
-    padding: 15px 20px;
+    padding: 10px 90px;
 }
 
 /* input */
@@ -98,21 +105,44 @@ body {
 }
 .fs-24{
   font-size: 24px;
-  font-weight: 400px;
   color: #333333;
+}
+.fs-32{
+  font-size: 32px;
 }
 .fs-48{
   font-size: 48px;
 }
 .fw-400{
-  font-weight: 400px;
+  font-weight: bold;
+}
+.cl-primary{
+  color:var(--primary-color);
 }
 .cl-secondary{
   color: var(--secondary-color);
+}
+.cl-success{
+  color: var(--success-color);
+}
+.cl-wrap{
+  color: var(--wrap-color);
 }
 .cl-price{
   color: var(--price-Color);
 }
 .cl-information{
   color: var(--information-color);
+}
+.cl-light{
+  color: var(--light-primary);
+}
+.cl-black{
+  color: var(--black-color);
+}
+.lh-24{
+  line-height: 24px;
+}
+.mb-6{
+  margin-bottom: 6px;
 }

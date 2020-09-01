@@ -4,6 +4,9 @@
   font-family: "Nunito-SemiBold";
   text-decoration: none;
 }
+img {
+  width: 100%;
+}
 body {
   background-color: #f6f5f2;
 }
@@ -26,10 +29,10 @@ header {
   width: 70%;
   margin: 0 auto;
   text-align: right;
-  padding: 10px;
+  padding: 5px;
 }
 .khung_menu i {
-  padding: 0 30px;
+  padding: 0 5px;
 }
 .icon_sh i {
   color: var(--primary-color);
@@ -185,18 +188,294 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px dashed #cdcdcd;
-  padding:50px 0px ;
+  padding: 50px 0px;
 }
 .fr_dow {
   align-items: center;
 }
-.fr_title a ,.fr_tt a{
-    color:black;
-    
+.fr_title a,
+.fr_tt a {
+  color: black;
 }
-.fr_day{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+.fr_day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.information_img {
+  margin: 0 auto;
+  background-color: var(--light-primary);
+}
+
+/* .item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+} */
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.image {
+  height: 400px;
+  background-color: gray;
+}
+
+.image:first-child {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 800px;
+}
+
+.khungThongTinTenAnh {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.tenAnh {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.price_left {
+  grid-area: left_pr;
+}
+.price_right {
+  grid-area: right_pr;
+}
+.price_center1 {
+  grid-area: left_ct1;
+}
+.price_center2 {
+  grid-area: left_ct2;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "left_pr left_pr  left_pr left_pr left_pr left_pr  right_pr  right_pr";
+
+  grid-gap: 10px;
+  /* background-color: #2196f3; */
+  border-radius: 15px;
+}
+.container > div {
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+  /* background-color: #ffffff;  */
+  /* padding-top: 32px; */
+  /* padding-bottom: 24px; */
+  border-radius: 20px;
+  /* margin-top: 32px; */
+  /* margin-right: 0px; */
+  /* height: -webkit-fit-content; */
+}
+/* Khung bên trái  */
+.item1 {
+  grid-area: header;
+}
+
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
+
+.price_left {
+  display: grid;
+  grid-template-areas:
+    "header header header header "
+    "main main main main "
+    "right right right right"
+    " footer footer footer footer  ";
+
+  grid-gap: 10px;
+
+  /* background-color: #2196f3; */
+  padding: 10px;
+}
+.price_left {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.item1 {
+  padding: 50px;
+  background-color: white;
+  border-radius: 20px;
+}
+.item3 {
+  background-color: turquoise;
+}
+.item4 {
+  padding: 50px;
+  background-color: white;
+  border-radius: 20px;
+}
+.item5 {
+  background-color: green;
+}
+
+.price_right {
+  border-radius: 15px;
+  background-color: #ffffff;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  border-radius: 20px;
+  margin-top: 32px;
+  margin-right: 0px;
+  height: -webkit-fit-content;
+}
+.thongTinChuTro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 20px;
+  background-color: rgb(246, 247, 249);
+  border-radius: 20px;
+  /* border-radius: 30px; */
+}
+.khungTTChuTro {
+  width: 100%;
+  /* background-color: white; */
+}
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50%;
+}
+._3YtkH {
+  display: flex;
+  flex-direction: row;
+  margin-right: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 24px;
+}
+._3YtkH > img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-right: 8px;
+}
+.thongTinChiTiet {
+  border-right: 1px solid #cdcdcd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 24px;
+}
+.thongTinNgayDang {
+  padding-left: 24px;
+}
+.sdt {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+._2zScZ {
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 24px;
+  /* border-radius: 20px; */
+}
+._70zUr {
+  width: calc(100% / 4);
+}
+._70zUr > ._3MSO3 {
+  color: var(--success-color);
+}
+._3QS8q p {
+  text-align: left;
+  margin-top: 24px;
+}
+._3QS8q > p:nth-child(2) {
+  color: var(--black-color);
+  /* color: black; */
+}
+._70zUr > p:nth-child(1) {
+  color: var(--black-color);
+}
+.item3 {
+  padding: 50px;
+  background-color: white;
+  border-radius: 20px;
+}
+.khungChiTietTienICh {
+  display: flex;
+  flex-flow: row wrap;
+}
+.chiTietTienIch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+.chiTietTienIch > span:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 60px;
+}
+.khungThoiGian{
+  display: flex;
+  align-items: center;
+}
+.khungTienich{
+  margin-top: 20px;
+}
+.title{
+  display: flex;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  
+}
+.khungThoiGian span:last-child {
+  margin-left: 10px;
+}
+.sucChua{
+  display: flex;
+  width: 100%;
+}
+.sucChua > div{
+  margin-left: 20px;
 }
