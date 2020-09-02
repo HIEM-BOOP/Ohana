@@ -29,6 +29,8 @@ body {
   padding: 15px 20px;
   background-color: var(--primary-color);
   border-radius: 15px;
+  text-align: center;
+ align-items: center;
 }
 
 /* Màu btn*/

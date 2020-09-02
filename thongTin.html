@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/component.css">
+        <script src="https://kit.fontawesome.com/b7a754bad9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic">
+    </head>
+
+    <body>
+        <header>
+            <!-- Phần tải xuống và đăng phòng -->
+            <div class="hd_menu">
+                <div class="khung_menu">
+                    <i class="fas fa-download"><span class="download">Tải APP</span></i>
+                    <i class="fas fa-home"><span class="icon_home">Đăng phòng dễ dàng </span></i>
+                </div>
+            </div>
+            <!-- Phần Logo và tìm kiếm -->
+
+        </header>
+
+        <main>
+            <div class="content">
+                <div class="ctn_tt">
+                    <span class="fs-24 cl-primary">Thông tin phòng</span>
+                    <div class="loaiPhong">
+                        <span class="fs-20">LOẠI PHÒNG</span>
+                        <div class="radio">
+                            <input type="radio" name="radio" checked="checked">
+                            <label for="content" class="contents">Kí túc xá/Homestay
+                            </label>
+                            <span class="checkmark"></span>
+                            <!-- 2 -->
+                            <div class="radio">
+                                <input type="radio" name="radio" checked="checked">
+                                <label for="content" class="contents">phòng cho thuê
+                                </label>
+                                <span class="checkmark"></span>
+                            </div>
+                            <!-- 3 -->
+                            <div class="radio">
+                                <input type="radio" name="radio" checked="checked">
+                                <label for="content" class="contents">Phong ở ghép
+                                </label>
+                                <span class="checkmark"></span>
+                            </div>
+                            <!-- 4 -->
+                            <div class="radio">
+                                <input type="radio" name="radio" checked="checked">
+                                <label for="content" class="contents">Nhà nguyên căn
+                                </label>
+                                <span class="checkmark"></span>
+                                <div class="radio">
+                                    <input type="radio" name="radio" checked="checked">
+                                    <label for="content" class="contents">Căn hộ
+                                    </label>
+
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="soLuongPhong">
+                        <span class="fs-20">SỐ LƯỢNG PHÒNG</span>
+                        <input type="text" placeholder="Nhập số lượng bạn đang quan lý">
+
+                    </div>
+                    <div class="sucChua">
+                        <span class="fs-20">Sức chứa</span>
+                        <input type="text" placeholder="Nhập số người/phòng">
+                    </div>
+                    <div class="gioiTinh">
+                        <span>Giới Tính</span>
+                        <div class="radio">
+                            <input type="radio" name="sx" checked="checked">
+                            <label for="content" class="contents">Tất cả
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="sx" checked="checked">
+                            <label for="content" class="contents">Nam
+                            </label>
+                            <span class="checkmark"></span>
+                        </div>
+
+                        <div class="radio">
+                            <input type="radio" name="sx" checked="checked">
+                            <label for="content" class="contents">Nữ
+                            </label>
+                            <span class="checkmark"></span>
+                        </div>
+
+                    </div>
+
+                    <!-- Diện tích -->
+                    <div class="dienTich">
+                        <span class="fs-20">Diện Tích</span>
+                        <input type="text" placeholder="Nhập diện tích phòng">
+                    </div>
+
+                    <!-- Chi Phí -->
+                    <div class="chiPhi">
+                        <span class="fs-20">Chi Phí</span>
+                        <div class="giaChoThue">
+                            <span class="fs-16">GIÁ CHO THUÊ</span>
+                            <input type="text" placeholder="Nhập giá cho thuê">
+                        </div>
+                        <div class="datCoc">
+                            <span class="fs-16">Đặt cọc</span>
+                            <input type="text " placeholder="Nhập số tháng hoặc số tiền">
+                        </div>
+                        <div class="tienDien">
+                            <span class="fs-16">TIỀN ĐIỆN</span>
+                            <input type="text" placeholder="Nhập số tiền">
+                            <input type="checkbox" name="mienphi" id="mienphi">
+                            <p class="fs-16">Miễn Phí</p>
+                        </div>
+
+                        <!-- Tiền nước -->
+                        <div class="tienNuoc">
+                            <span class="fs-16">Tiền Nước</span>
+                            <input type="text" placeholder="Nhập số tiền">
+                            <input type=" checkbox " name="mienphi" id="mienphi">
+                            <p class="fs-16">Miễn Phi</p>
+                        </div>
+
+                        <div class="internet">
+                            <span class="fs-16">INTERNET/TRUYỀN HÌNH CÁP</span>
+                            <input type="text" placeholder="Nhập số tiền">
+                            <input type=" checkbox " name="mienphi" id="mienphi">
+                            <p class="fs-16">Miễn Phi
+                        </div>
+
+                        <div class="coChoDeXe">
+
+                            <input type="checkbox"><span class="fs-16">Có chỗ để xe</span>
+                            <span class="fs-12">PHÍ GIỮ XE</span>
+                            <input type="text">
+                            <input type="checkbox">
+                            <p class="fs-16">Miễn phí</p>
+
+                        </div>
+                    </div>
+
+                    <div class="diaChi">
+                        <div class="thanhPho">
+                            <span class="fs-16">Thành Phố</span>
+                            <select type="car" id="car">
+                                <option value="volvo">Hồ Chí Minh</option>
+                                <option value="saab">Hà Nội</option>
+                                <option value="opel">Đà Nẵng</option>
+                                <option value="audi">Singapore</option>
+                                <option value="audi">San Francisco</option>
+
+                        </div>
+                    
+                    <div class="quan">
+                        <span class="fs-16">Quận/HUYỆN</span>
+                        <select type="car" id="car">
+                            <option value="volvo">Quận 1</option>
+                            <option value="saab">Quận 2</option>
+                            <option value="opel">Quận 3</option>
+                            <option value="audi">Quận 4</option>
+                            <option value="audi">Quận 5</option>
+                    </div>
+                    <div class="phuong">
+                        <span class="fs-16">Phường/Xã</span>
+                        <select type="car" id="car">
+                            <option value="volvo">Phường 1</option>
+                            <option value="saab">Phường 2</option>
+                            <option value="opel">Phương 3</option>
+                            <option value="audi">Phương 4</option>
+                            <option value="audi">Phương 5</option>
+                    </div>
+                    <div class="tenDuong">
+                        <input type="text">
+                    </div>
+                    <div class="soNha">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="tienich">
+                    <div class="title_img">
+                        <span class="fs-20">Thông tin hình ảnh và tiện ích</span>
+
+
+                        <!-- tiên ích -->
+                        <div class="ctn_tienich">
+                            <div class="item_tienIch"><i class="fas fa-toilet"></i><span class="fs-16">WC Riêng</span>
+                            </div>
+                            <div class="item_tienIch"><i class="fas fa-motorcycle"></i><span class="fs-16">WC
+                                    Riêng</span></div>
+                            <div class="item_tienIch"><i class="fas fa-door-open"></i><span class="fs-16">Cửa sổ</span>
+                            </div>
+                            <div class="item_tienIch"><i class="fas fa-user-shield"></i><span class="fs16">An
+                                    ninh</span></div>
+                            <div class="item_tienIch"><i class="fas fa-wifi"></i><span class="fs-16">Wifi</span></div>
+                            <div class="item_tienIch"><i class="fas fa-stopwatch"></i><span class="fs-16">Tự do</span>
+                            </div>
+                            <div class="item_tienIch"><i class="fas fa-key"></i><span class="fs-16">Chủ riêng</span>
+                            </div>
+                            <div class="item_tienIch"><i class="fas fa-fan"></i><span class="fs-16">Máy lạnh</span>
+                            </div>
+                            <div class="item_tienIch"><i class="fas fa-hand-holding-water"></i><span class="fs-16">Máy
+                                    nước nóng</span></div>
+                            <div class="item_tienIch"><i class="fas fa-sink"></i><span class="fs-16">Nhà bếp</span>
+                            </div>
+                            <div class="item_tienIch"><i class="fas fa-solar-panel"></i><span>Tủ lạnh</span></div>
+                            <div class="item_tienIch"><i class="fas fa-recycle"></i><span>Máy giặt</span></div>
+                            <div class="item_tienIch"><i class="fas fa-life-ring"></i><span class="fs-16">Gác
+                                    lửng</span></div>
+                            <div class="item_tienIch"><i class="fas fa-bed"></i><span class="fs-16">Giường</span></div>
+                            <div class="item_tienIch"><i class="fas fa-door-closed"></i><span class="fs-16">Tử đồ</span>
+                            </div>
+                            <div class="item_tienIch"><i class="fas fa-tv"></i><span class="fs-16">Tivi</span></div>
+                            <div class="item_tienIch"><i class="fas fa-paw"></i><span class="fs-16">Thú cưng</span>
+                            </div>
+                            <div class="item_tienIch"><i class="fad fa-bacon"></i><span class="fs-16">Ban công</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Xác nhận -->
+                <div class="khungXacNhan">
+                    <div class="tt-xacNhan">
+                        <span class="fs-20">
+                            Xác nhận
+                        </span>
+                    </div>
+                    <div class="container_xacNhan">
+                        <div class="ttXacNhan">1
+                            <div class="tt"><span class="fs-16">Số điện thoại</span></div>
+                            <input type="text" placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="ttXacNhan">2
+                            <div class="tt"><span class="fs-16">Tiêu đề đăng bài</span></div>
+                            <input type="text" placeholder="Nhập tên phòng">
+                        </div>
+                        <div class="ttXacNhan">3
+                            <div class="tt"><span class="fs-16">Nội dung mô tả</span></div>
+                            <input type="text" placeholder="Môi trường sống sạch , khu phố an ninh...">
+                        </div>
+                        <div class="ttXacNhan">4
+                            <div class="tt"><span class="fs-16">Thời gian mở cửa</span></div>
+                            <input type="text" placeholder="Giờ mở cửa">
+                        </div>
+                        <div class="ttXacNhan">5
+                            <div class="tt"><span class="fs-16">Thời gian gian đóng cửa</span></div>
+                            <input type="text" placeholder="Giờ đóng cửa">
+                        </div>
+                    </div>
+                    <div class="dangPhong">
+                        <div class="btn btn-large btn-secondary"><i class="fas fa-home"></i><span class="fs-16 fw-400">Đăng Phòng</span>
+                        </div>
+                </div>
+                </div>
+            </div>
+
+            </div>
+            </div>
+
+
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+
+</html>
