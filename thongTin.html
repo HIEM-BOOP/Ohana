@@ -28,36 +28,42 @@
         <main>
             <div class="content">
                 <div class="ctn_tt">
-                    <span class="fs-24 cl-primary">Thông tin phòng</span>
+                    <div class="cttt">
+                        <span class="fs-32 cl-primary fw-400">Thông tin phòng</span></div>
                     <div class="loaiPhong">
-                        <span class="fs-20">LOẠI PHÒNG</span>
-                        <div class="radio">
-                            <input type="radio" name="radio" checked="checked">
+                        <span class="fs-20 cl-success">LOẠI PHÒNG</span>
+                        <div class="radio cl-information">
+                            <!-- 1 -->
+                            <input type="radio" class="loaiPhong" value="Kí túc xá/Homestay" name="radio"
+                                checked="checked">
                             <label for="content" class="contents">Kí túc xá/Homestay
                             </label>
                             <span class="checkmark"></span>
                             <!-- 2 -->
                             <div class="radio">
-                                <input type="radio" name="radio" checked="checked">
+                                <input type="radio" class="loaiPhong" value="phòng cho thuê" name="radio"
+                                    checked="checked">
                                 <label for="content" class="contents">phòng cho thuê
                                 </label>
                                 <span class="checkmark"></span>
                             </div>
                             <!-- 3 -->
                             <div class="radio">
-                                <input type="radio" name="radio" checked="checked">
+                                <input type="radio" class="loaiPhong" value="Phòng ở ghép" name="radio"
+                                    checked="checked">
                                 <label for="content" class="contents">Phong ở ghép
                                 </label>
                                 <span class="checkmark"></span>
                             </div>
                             <!-- 4 -->
                             <div class="radio">
-                                <input type="radio" name="radio" checked="checked">
+                                <input type="radio" class="loaiPhong" value="Nhà nguyên căn" name="radio"
+                                    checked="checked">
                                 <label for="content" class="contents">Nhà nguyên căn
                                 </label>
                                 <span class="checkmark"></span>
                                 <div class="radio">
-                                    <input type="radio" name="radio" checked="checked">
+                                    <input type="radio" class="loaiPhong" value="Căn Hộ" name="radio" checked="checked">
                                     <label for="content" class="contents">Căn hộ
                                     </label>
 
@@ -67,30 +73,30 @@
                         </div>
                     </div>
                     <div class="soLuongPhong">
-                        <span class="fs-20">SỐ LƯỢNG PHÒNG</span>
-                        <input type="text" placeholder="Nhập số lượng bạn đang quan lý">
+                        <span class="fs-20 cl-success">SỐ LƯỢNG PHÒNG</span>
+                        <input type="number" id="soLuongPhong" placeholder="Nhập số lượng bạn đang quan lý">
 
                     </div>
                     <div class="sucChua">
-                        <span class="fs-20">Sức chứa</span>
-                        <input type="text" placeholder="Nhập số người/phòng">
+                        <span class="fs-20 cl-success">Sức chứa</span>
+                        <input type="text" id="sucChua" placeholder="Nhập số người/phòng">
                     </div>
-                    <div class="gioiTinh">
-                        <span>Giới Tính</span>
-                        <div class="radio">
-                            <input type="radio" name="sx" checked="checked">
+                    <div class="gioiTinh ">
+                        <span class="fs-20 cl-success">Giới Tính</span>
+                        <div class="radio ">
+                            <input type="radio" class="gender" value="Tất cả" name="sx" checked="checked">
                             <label for="content" class="contents">Tất cả
                             </label>
                         </div>
                         <div class="radio">
-                            <input type="radio" name="sx" checked="checked">
+                            <input type="radio" class="gender" value="Nam" name="sx" checked="checked">
                             <label for="content" class="contents">Nam
                             </label>
                             <span class="checkmark"></span>
                         </div>
 
                         <div class="radio">
-                            <input type="radio" name="sx" checked="checked">
+                            <input type="radio" class="gender" value="Nữ" name="sx" checked="checked">
                             <label for="content" class="contents">Nữ
                             </label>
                             <span class="checkmark"></span>
@@ -100,167 +106,185 @@
 
                     <!-- Diện tích -->
                     <div class="dienTich">
-                        <span class="fs-20">Diện Tích</span>
-                        <input type="text" placeholder="Nhập diện tích phòng">
+                        <span class="fs-20 cl-success">Diện Tích</span>
+                        <input type="number" id="dienTich" placeholder="Nhập diện tích phòng">
                     </div>
 
                     <!-- Chi Phí -->
+                    <span class="fs-20 cl-success">Chi Phí</span>
                     <div class="chiPhi">
-                        <span class="fs-20">Chi Phí</span>
                         <div class="giaChoThue">
-                            <span class="fs-16">GIÁ CHO THUÊ</span>
-                            <input type="text" placeholder="Nhập giá cho thuê">
+                            <span class="fs-16 cl-information">GIÁ CHO THUÊ</span>
+                            <input type="number" id="giaChoThue" placeholder="Nhập giá cho thuê">
                         </div>
                         <div class="datCoc">
-                            <span class="fs-16">Đặt cọc</span>
-                            <input type="text " placeholder="Nhập số tháng hoặc số tiền">
+                            <span class="fs-16 cl-information">Đặt cọc</span>
+                            <input type="number" id="datCoc" placeholder="Nhập số tháng hoặc số tiền">
                         </div>
                         <div class="tienDien">
-                            <span class="fs-16">TIỀN ĐIỆN</span>
-                            <input type="text" placeholder="Nhập số tiền">
-                            <input type="checkbox" name="mienphi" id="mienphi">
-                            <p class="fs-16">Miễn Phí</p>
+                            <span class="fs-16 cl-information">TIỀN ĐIỆN</span>
+                            <input type="number" id="tienDien" placeholder="Nhập số tiền">
+                            <input type="checkbox" name="mienphi" id="mienphi" value="Miễn Phí">
+                            <p class="fs-16 cl-success">Miễn Phí</p>
                         </div>
 
                         <!-- Tiền nước -->
                         <div class="tienNuoc">
-                            <span class="fs-16">Tiền Nước</span>
-                            <input type="text" placeholder="Nhập số tiền">
-                            <input type=" checkbox " name="mienphi" id="mienphi">
-                            <p class="fs-16">Miễn Phi</p>
+                            <span class="fs-16 cl-information ">Tiền Nước</span>
+                            <input type="number" id="tienNuoc" placeholder="Nhập số tiền">
+                            <input type="checkbox" name="mienphi" id="mienphi" value="Miễn Phí">
+                            <p class="fs-16 cl-success">Miễn Phí</p>
                         </div>
 
                         <div class="internet">
-                            <span class="fs-16">INTERNET/TRUYỀN HÌNH CÁP</span>
-                            <input type="text" placeholder="Nhập số tiền">
-                            <input type=" checkbox " name="mienphi" id="mienphi">
-                            <p class="fs-16">Miễn Phi
+                            <span class="fs-16 cl-information fw-400">INTERNET/TRUYỀN HÌNH CÁP</span>
+                            <input type="number" id="internet" placeholder="Nhập số tiền">
+                            <input type="checkbox" name="mienphi" id="mienphi" value="Miễn Phí">
+                            <p class="fs-16 cl-success">Miễn Phí</p>
                         </div>
 
                         <div class="coChoDeXe">
 
-                            <input type="checkbox"><span class="fs-16">Có chỗ để xe</span>
-                            <span class="fs-12">PHÍ GIỮ XE</span>
-                            <input type="text">
-                            <input type="checkbox">
-                            <p class="fs-16">Miễn phí</p>
+                            <input type="checkbox"><span class="fs-16 cl-information">Có chỗ để xe</span>
+                            <span class="fs-16 cl-information">&nbsp;&nbsp;&nbsp;&nbsp;Phí dữ xe</span>
+                            <input type="number">
+                            <input type="checkbox" id="coChoDeXe" value="Miễn Phí">
+                            <p class="fs-16 cl-success">Miễn phí</p>
 
                         </div>
                     </div>
 
                     <div class="diaChi">
                         <div class="thanhPho">
-                            <span class="fs-16">Thành Phố</span>
-                            <select type="car" id="car">
-                                <option value="volvo">Hồ Chí Minh</option>
-                                <option value="saab">Hà Nội</option>
-                                <option value="opel">Đà Nẵng</option>
-                                <option value="audi">Singapore</option>
-                                <option value="audi">San Francisco</option>
+                            <span class="fs-16 cl-information">Thành Phố</span>
+                            <select type="car" id="city">
+                                <option value="Hồ chí minh">Hồ Chí Minh</option>
+                                <option value="Hà Nội">Hà Nội</option>
+                                <option value="Đà Nẵng">Đà Nẵng</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="San Francisco">San Francisco</option>
+                            </select>
+                        </div>
 
+                        <div class="quan">
+                            <span class="fs-16 cl-information">Quận/Huyện</span>
+                            <select type="quan" id="quan">
+                                <option value="Quận 1">Quận 1</option>
+                                <option value="Quận 2">Quận 2</option>
+                                <option value="Quận 3">Quận 3</option>
+                                <option value="Quận 4">Quận 4</option>
+                                <option value="Quận 5">Quận 5</option>
+                            </select>
                         </div>
-                    
-                    <div class="quan">
-                        <span class="fs-16">Quận/HUYỆN</span>
-                        <select type="car" id="car">
-                            <option value="volvo">Quận 1</option>
-                            <option value="saab">Quận 2</option>
-                            <option value="opel">Quận 3</option>
-                            <option value="audi">Quận 4</option>
-                            <option value="audi">Quận 5</option>
+                        <div class="phuong">
+                            <span class="fs-16 cl-information">Phường/Xã</span>
+                            <select type="car" id="phuong">
+                                <option value="Phường 1">Phường 1</option>
+                                <option value="Phường 2">Phường 2</option>
+                                <option value="Phường 3">Phương 3</option>
+                                <option value="Phường 4">Phương 4</option>
+                                <option value="Phường 5">Phương 5</option>
+                            </select>
+                        </div>
+                        <div class="tenDuong">
+                            <span class="fs-16">Tên đường</span>
+                            <input type="text" id="tenDuong">
+                        </div>
+                        <div class="soNha"><span class="fs-16">Số nhà</span>
+                            <input type="text" id="soNha">
+                        </div>
                     </div>
-                    <div class="phuong">
-                        <span class="fs-16">Phường/Xã</span>
-                        <select type="car" id="car">
-                            <option value="volvo">Phường 1</option>
-                            <option value="saab">Phường 2</option>
-                            <option value="opel">Phương 3</option>
-                            <option value="audi">Phương 4</option>
-                            <option value="audi">Phương 5</option>
-                    </div>
-                    <div class="tenDuong">
-                        <input type="text">
-                    </div>
-                    <div class="soNha">
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="tienich">
-                    <div class="title_img">
-                        <span class="fs-20">Thông tin hình ảnh và tiện ích</span>
+                    <div class="tienich">
+                        <div class="title_img">
+                            <span class="fs-20 fw-400 cl-success">Thông tin hình ảnh và tiện ích</span>
+                            <div class="hinhAnhPhong">
+                                <input type="text" placeholder="Hình ảnh 1" id="imgSanPham1">
+                                <input type="text" placeholder="Hình ảnh 2 " id="imgSanPham2">
+                                <input type="text" placeholder="Hình ảnh 3" id="imgSanPham3">
+                                <input type="text" placeholder="Hình ảnh 4" id="imgSanPham4">
+                            </div>
 
-
-                        <!-- tiên ích -->
-                        <div class="ctn_tienich">
-                            <div class="item_tienIch"><i class="fas fa-toilet"></i><span class="fs-16">WC Riêng</span>
+                            <!-- tiên ích -->
+                            <div id="ctn_tienich">
+                                <!-- <div class="item_tienIch"><i class="fas fa-toilet"></i><span class="fs-16">WC
+                                        Riêng</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-motorcycle"></i><span class="fs-16">WC
+                                        Riêng</span></div>
+                                <div class="item_tienIch"><i class="fas fa-door-open"></i><span class="fs-16">Cửa
+                                        sổ</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-user-shield"></i><span class="fs16">An
+                                        ninh</span></div>
+                                <div class="item_tienIch"><i class="fas fa-wifi"></i><span class="fs-16">Wifi</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-stopwatch"></i><span class="fs-16">Tự
+                                        do</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-key"></i><span class="fs-16">Chủ riêng</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-fan"></i><span class="fs-16">Máy lạnh</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-hand-holding-water"></i><span
+                                        class="fs-16">Máy
+                                        nước nóng</span></div>
+                                <div class="item_tienIch"><i class="fas fa-sink"></i><span class="fs-16">Nhà bếp</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-solar-panel"></i><span>Tủ lạnh</span></div>
+                                <div class="item_tienIch"><i class="fas fa-recycle"></i><span>Máy giặt</span></div>
+                                <div class="item_tienIch"><i class="fas fa-life-ring"></i><span class="fs-16">Gác
+                                        lửng</span></div>
+                                <div class="item_tienIch"><i class="fas fa-bed"></i><span class="fs-16">Giường</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-door-closed"></i><span class="fs-16">Tử
+                                        đồ</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fas fa-tv"></i><span class="fs-16">Tivi</span></div>
+                                <div class="item_tienIch"><i class="fas fa-paw"></i><span class="fs-16">Thú cưng</span>
+                                </div>
+                                <div class="item_tienIch"><i class="fad fa-bacon"></i><span class="fs-16">Ban
+                                        công</span>
+                                </div> -->
                             </div>
-                            <div class="item_tienIch"><i class="fas fa-motorcycle"></i><span class="fs-16">WC
-                                    Riêng</span></div>
-                            <div class="item_tienIch"><i class="fas fa-door-open"></i><span class="fs-16">Cửa sổ</span>
+                        </div>
+                    </div>
+                    <!-- Xác nhận -->
+                    <div class="khungXacNhan">
+                        <div class="tt-xacNhan">
+                            <span class="fs-20 fw-400 cl-success">
+                                Xác nhận
+                            </span>
+                        </div>
+                        <div class="container_xacNhan">
+                            <div class="ttXacNhan">
+                                <div class="tt"><span class="fs-16">Số điện thoại</span></div>
+                                <input type="number" placeholder="Nhập số điện thoại" id="soDienThoai">
                             </div>
-                            <div class="item_tienIch"><i class="fas fa-user-shield"></i><span class="fs16">An
-                                    ninh</span></div>
-                            <div class="item_tienIch"><i class="fas fa-wifi"></i><span class="fs-16">Wifi</span></div>
-                            <div class="item_tienIch"><i class="fas fa-stopwatch"></i><span class="fs-16">Tự do</span>
+                            <div class="ttXacNhan">
+                                <div class="tt"><span class="fs-16">Tiêu đề đăng bài</span></div>
+                                <input type="text" placeholder="Nhập tên phòng" id="tieuDe">
                             </div>
-                            <div class="item_tienIch"><i class="fas fa-key"></i><span class="fs-16">Chủ riêng</span>
+                            <div class="ttXacNhan">
+                                <div class="tt"><span class="fs-16">Nội dung mô tả</span></div>
+                                <input type="text" placeholder="Môi trường sống sạch , khu phố an ninh..."
+                                    id="noiDungMoTa">
                             </div>
-                            <div class="item_tienIch"><i class="fas fa-fan"></i><span class="fs-16">Máy lạnh</span>
+                            <div class="ttXacNhan">
+                                <div class="tt"><span class="fs-16">Thời gian mở cửa</span></div>
+                                <input type="text" placeholder="Giờ mở cửa" id="openWindow">
                             </div>
-                            <div class="item_tienIch"><i class="fas fa-hand-holding-water"></i><span class="fs-16">Máy
-                                    nước nóng</span></div>
-                            <div class="item_tienIch"><i class="fas fa-sink"></i><span class="fs-16">Nhà bếp</span>
+                            <div class="ttXacNhan">
+                                <div class="tt"><span class="fs-16">Thời gian gian đóng cửa</span></div>
+                                <input type="text" placeholder="Giờ đóng cửa" id='closeOpen'>
                             </div>
-                            <div class="item_tienIch"><i class="fas fa-solar-panel"></i><span>Tủ lạnh</span></div>
-                            <div class="item_tienIch"><i class="fas fa-recycle"></i><span>Máy giặt</span></div>
-                            <div class="item_tienIch"><i class="fas fa-life-ring"></i><span class="fs-16">Gác
-                                    lửng</span></div>
-                            <div class="item_tienIch"><i class="fas fa-bed"></i><span class="fs-16">Giường</span></div>
-                            <div class="item_tienIch"><i class="fas fa-door-closed"></i><span class="fs-16">Tử đồ</span>
-                            </div>
-                            <div class="item_tienIch"><i class="fas fa-tv"></i><span class="fs-16">Tivi</span></div>
-                            <div class="item_tienIch"><i class="fas fa-paw"></i><span class="fs-16">Thú cưng</span>
-                            </div>
-                            <div class="item_tienIch"><i class="fad fa-bacon"></i><span class="fs-16">Ban công</span>
+                        </div>
+                        <div class="dangPhong">
+                            <div class="btn btn-large btn-secondary" onclick="onClickDangPhong()"><i
+                                    class="fas fa-home"></i><span class="fs-16 fw-400">&nbsp;&nbsp;&nbsp;&nbsp;Đăng Phòng</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Xác nhận -->
-                <div class="khungXacNhan">
-                    <div class="tt-xacNhan">
-                        <span class="fs-20">
-                            Xác nhận
-                        </span>
-                    </div>
-                    <div class="container_xacNhan">
-                        <div class="ttXacNhan">1
-                            <div class="tt"><span class="fs-16">Số điện thoại</span></div>
-                            <input type="text" placeholder="Nhập số điện thoại">
-                        </div>
-                        <div class="ttXacNhan">2
-                            <div class="tt"><span class="fs-16">Tiêu đề đăng bài</span></div>
-                            <input type="text" placeholder="Nhập tên phòng">
-                        </div>
-                        <div class="ttXacNhan">3
-                            <div class="tt"><span class="fs-16">Nội dung mô tả</span></div>
-                            <input type="text" placeholder="Môi trường sống sạch , khu phố an ninh...">
-                        </div>
-                        <div class="ttXacNhan">4
-                            <div class="tt"><span class="fs-16">Thời gian mở cửa</span></div>
-                            <input type="text" placeholder="Giờ mở cửa">
-                        </div>
-                        <div class="ttXacNhan">5
-                            <div class="tt"><span class="fs-16">Thời gian gian đóng cửa</span></div>
-                            <input type="text" placeholder="Giờ đóng cửa">
-                        </div>
-                    </div>
-                    <div class="dangPhong">
-                        <div class="btn btn-large btn-secondary"><i class="fas fa-home"></i><span class="fs-16 fw-400">Đăng Phòng</span>
-                        </div>
-                </div>
-                </div>
-            </div>
 
             </div>
             </div>
@@ -271,6 +295,283 @@
         <footer>
 
         </footer>
+
+        <script>
+            var listTienIch = [
+                {
+                    id: 1,
+                    title: 'WC riêng ',
+                    icon: '<i class="fas fa-toilet"></i>',
+                    isCheck: false,
+
+                },
+                {
+                    id: 2,
+                    title: 'Chỗ để xe',
+                    icon: '<i class="fab fa-windows"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 3,
+                    title: 'Cửa sổ ',
+                    icon: '<i class="fas fa-motorcycle"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 4,
+                    title: 'An ninh',
+                    icon: '<i class="fas fa-user-shield"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 5,
+                    title: 'Wifi',
+                    icon: '<i class="fas fa-user-shield"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 6,
+                    title: 'Tự do',
+                    icon: '<i class="far fa-clock"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 7,
+                    title: 'Chủ riêng',
+                    icon: '<i class="fas fa-key"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 8,
+                    title: 'Máy lạnh',
+                    icon: '<i class="fas fa-thermometer-empty"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 9,
+                    title: 'Máy nước nón',
+                    icon: '<i class="fas fa-hand-holding-water"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 10,
+                    title: 'Nhà bếp',
+                    icon: '<i class="fas fa-sink"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 11,
+                    title: 'Máy giặt',
+                    icon: '<i class="fas fa-hands-wash"></i>',
+                    isCheck: false,
+                },
+
+                {
+                    id: 12,
+                    title: 'Gác lửng',
+                    icon: '<i class="fas fa-life-ring"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 13,
+                    title: 'Giường',
+                    icon: '<i class="fas fa-bed"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 14,
+                    title: 'Tủ đồ',
+                    icon: '<i class="fas fa-motorcycle"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 15,
+                    title: 'Tivi',
+                    icon: '<i class="fas fa-bone"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 16,
+                    title: 'Thú cưng',
+                    icon: '<i class="fas fa-paw"></i>',
+                    isCheck: false,
+                },
+                {
+                    id: 17,
+                    title: 'Ban công',
+                    icon: '<i class="fas fa-bacon"></i>',
+                    isCheck: false,
+                }
+            ]
+
+            loadTienIch();
+            function loadTienIch() {
+                var HTML = '';
+                for (var i = 0; i < listTienIch.length; i++) {
+                    var html = `<div style = 'background-color : #b085f5' onclick = onClick(${listTienIch[i].id}) class="item_tienIch">${listTienIch[i].icon}<span class="fs-16">
+                                           ${listTienIch[i].title}</span></div>`;
+                    HTML = HTML + html;
+                    var DOM = document.getElementById('ctn_tienich').innerHTML = HTML;
+                    if (listTienIch.isCheck == true) {
+                        var html = `<div style = 'background-color : #4d2c91' onclick = onClick(${listTienIch[i].id}) class="item_tienIch">${listTienIch[i].icon}<span class="fs-16">
+                                           ${listTienIch[i].title}</span></div>`;
+                    } else {
+                        var html = `<div style = 'background-color : #b085f5' onclick = onClick(${listTienIch[i].id}) class="item_tienIch">${listTienIch[i].icon}<span class="fs-16">
+                                           ${listTienIch[i].title}</span></div>`;
+                    }
+                }
+                console.log('load danh sach tien ich');
+                var Html = '';
+                for (var i = 0; i < listTienIch.length; i++) {
+                    if (listTienIch[i].isCheck == true) {
+                        var html = `<div style = 'background-color :#4d2c91 ' onclick = onClickTienIch(${listTienIch[i].id}) class="item_tienIch">${listTienIch[i].icon}<span class="fs-16">
+                                        ${listTienIch[i].title}</span></div>`;
+                        Html = Html + html;
+
+                    }
+                    else if (listTienIch[i].isCheck == false) {
+                        var html = `<div style = 'background-color : #b085f5' onclick = onClickTienIch(${listTienIch[i].id}) class="item_tienIch">${listTienIch[i].icon}<span class="fs-16">
+                                        ${listTienIch[i].title}</span></div>`;
+                        Html = Html + html;
+
+                    }
+                    var Dom = document.getElementById('ctn_tienich').innerHTML = Html;
+                }
+
+            }
+
+
+            function onClickTienIch(id) {
+                for (var i = 0; i < listTienIch.length; i++) {
+                    if (listTienIch[i].id == id) {
+                        if (listTienIch[i].isCheck == false) {
+                            listTienIch[i].isCheck = true;
+                            console.log(listTienIch[i].isCheck);
+                            loadTienIch();
+
+
+                        } else {
+                            listTienIch[i].isCheck = false;
+                            console.log(listTienIch[i].isCheck);
+                            loadTienIch();
+                        }
+                    }
+                }
+            }
+            function onClickDangPhong() {
+                var closeOpen = document.getElementById('closeOpen').value;
+                console.log(closeOpen);
+                var soDienThoai = document.getElementById('soDienThoai').value;
+                console.log(soDienThoai);
+                var tieuDe = document.getElementById('tieuDe').value;
+                console.log(tieuDe);
+                var noiDungMoTa = document.getElementById('noiDungMoTa').value;
+                console.log(noiDungMoTa);
+                var openWindow = document.getElementById('openWindow').value;
+                console.log(openWindow);
+                var city = document.getElementById('city').value;
+                console.log(city);
+
+                var loai_phong = document.querySelector('.loaiPhong:checked').value;
+                console.log(loai_phong);
+                var gender = document.querySelector('.gender:checked').value;
+                console.log(gender);
+                var soLuongPhong = document.getElementById('soLuongPhong').value;
+                console.log(soLuongPhong);
+                var sucChua = document.getElementById('sucChua').value;
+                console.log(sucChua);
+                var dienTich = document.getElementById('dienTich').value;
+                console.log(dienTich);
+                var giaChoThue = document.getElementById('giaChoThue').value;
+                console.log(giaChoThue);
+                var datCoc = document.getElementById('datCoc').value;
+
+                console.log(datCoc);
+                var tienDien = document.getElementById('tienDien').value;
+                console.log(tienDien);
+                var tienNuoc = document.getElementById('tienNuoc').value;
+                console.log(tienNuoc);
+                var internet = document.getElementById('internet').value;
+                console.log(internet);
+                var quan = document.getElementById('quan').value;
+                console.log(quan);
+                var phuong = document.getElementById('phuong').value;
+                console.log(phuong);
+                var tenDuong = document.getElementById('tenDuong').value;
+                console.log(tenDuong);
+                var soNha = document.getElementById('soNha').value;
+                console.log(soNha);
+                /* Hình ảnh */
+                var hinhAnhPhong1 =  document.getElementById('imgSanPham1').value;
+                console.log(hinhAnhPhong1);
+                 var hinhAnhPhong2 = document.getElementById('imgSanPham2').value;
+                console.log(hinhAnhPhong2);
+                 var hinhAnhPhong3 = document.getElementById('imgSanPham3').value;
+                console.log(hinhAnhPhong3);
+                 var hinhAnhPhong4 = document.getElementById('imgSanPham4').value;
+                console.log(hinhAnhPhong4);
+
+                // console.log(listTienIch);
+                var dsTienIchDuocChon = [];
+                for (var i = 0; i < listTienIch.length; i++) {
+                    if (listTienIch[i].isCheck === true) {
+                        var count = dsTienIchDuocChon.push(listTienIch[i]);
+                        // console.log(dsTienIchDuocChon);
+                    }
+
+                }
+                var phong = {
+                    phuong: phuong,
+                    soDienThoai: soDienThoai,
+                    closeOpen: closeOpen,
+                    tieuDe: tieuDe,
+                    noiDungMoTa: noiDungMoTa,
+                    openWindow: openWindow,
+                    city: city,
+                    loai_phong: loai_phong,
+                    gender: gender,
+                    soLuongPhong: soLuongPhong,
+                    sucChua: sucChua,
+                    giaChoThue: giaChoThue,
+                    dienTich: dienTich,
+                    tenDuong: tenDuong,
+                    quan: quan,
+                    tienDien: tienDien,
+                    datCoc: datCoc,
+                    internet: internet,
+                    tienNuoc: tienNuoc,
+                    soNha: soNha,
+                    sucChua: sucChua,
+                    hinhAnhPhong1: hinhAnhPhong1,
+                    hinhAnhPhong2: hinhAnhPhong2,
+                    hinhAnhPhong3: hinhAnhPhong3,
+                    hinhAnhPhong4: hinhAnhPhong4,
+                    dsTienIchDuocChon: dsTienIchDuocChon,
+
+                }
+                console.log(phong);
+                /* lay dsPhong tren localstore */
+                var jsonDsPhong = localStorage.getItem("dsPhong");
+                /* Tao danh mang dsPhong */
+                var dsPhong = [];
+                if (jsonDsPhong != null)
+
+                    var jsonDsPhong = localStorage.getItem("dsPhong");
+                dsPhong = JSON.parse(jsonDsPhong);
+
+                dsPhong.push(phong);
+                localStorage.setItem('dsPhong', JSON.stringify(dsPhong));
+
+
+
+
+
+
+            }
+
+
+        </script>
+
     </body>
 
 </html>

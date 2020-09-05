@@ -157,6 +157,14 @@ main:first-child {
 .fr_chiTiet > span {
   padding: 10px 0;
 }
+.gioiTinhVaDienTich{
+  width: 100px;
+  display: grid;
+  grid-template-columns: 1fr  1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 50px;
+  
+}
 .kieuPhong,
 .diaChi {
   display: block;
@@ -224,6 +232,7 @@ footer {
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
   max-width: 1400px;
+  padding-top: 20px;
   margin: auto;
 }
 
@@ -460,6 +469,7 @@ footer {
 }
 .sucChua {
   display: flex;
+  align-items: center;
   width: 100%;
 }
 .sucChua > div {
@@ -470,31 +480,28 @@ footer {
   background-color: white;
   border-radius: 20px;
 }
-.noiDung{
-  display: flex; 
-  align-items: center; 
+.noiDung {
+  display: flex;
+  align-items: center;
 }
 ._2qpkq {
-  text-align:left
- 
+  text-align: left;
 }
-.content{
+.content {
   display: block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 20px;
-
 }
-.content > input{
-    position: absolute;
-    opacity : 0;
-    cursor: pointer;
-    height: 0;
-    
+.content > input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
 }
-.content{
+.content {
   width: 1400px;
   display: flex;
   background-color: white;
@@ -504,39 +511,38 @@ footer {
   margin: 0 auto;
   margin-top: 20px;
 }
-.ctn_tt{
+.ctn_tt {
   margin: 0 auto;
 }
-.soLuongPhong{
-  display: flex; 
-  flex-direction: column;
-}
-.sucChua{
+.soLuongPhong {
   display: flex;
   flex-direction: column;
 }
-.ctn_tienich{
+.sucChua {
+  display: flex;
+  flex-direction: row;
+}
+#ctn_tienich {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
-  max-width: 1400px ;
-  background-color:gainsboro;
+  max-width: 1400px;
+  /* background-color: rgb(212, 141, 141); */
 }
-.item_tienIch{
-  background-color: chocolate;
+.item_tienIch {
+  background-color: #b085f5;
   border-radius: 10px;
   align-items: center;
   padding: 10px;
-
 }
-.item_tienIch>i{
+.item_tienIch > i {
   margin-right: 10px;
 }
-.container_xacNhan{
+.container_xacNhan {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   /* max-width: 1400px; */
   margin: auto;
@@ -544,17 +550,65 @@ footer {
 .container_xacNhan:first-child {
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-start: 1 ;
+  grid-row-start: 1;
   grid-row-end: 3;
 }
-.container_xacNhan>div:nth-of-type(2){
-  grid-column-start: 1 ;
+.container_xacNhan > div:nth-of-type(2) {
+  grid-column-start: 1;
   grid-column-end: 3;
 }
-.container_xacNhan>div:nth-of-type(3){
-  grid-column-start: 1 ;
+.container_xacNhan > div:nth-of-type(3) {
+  grid-column-start: 1;
   grid-column-end: 3;
 }
-.dangPhong>div{
-  
+.cttt {
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.ctn_tt {
+  margin: 0 auto;
+}
+.radio {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--information-color);
+  font-size: 16px;
+}
+.ctn_tt input {
+  border-radius: 30px;
+  outline: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+} */
+span {
+  margin: 10px;
+}
+.dienTich {
+  display: grid;
+}
+.chiPhi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.tienDien {
+  display: flex;
+  align-items: center;
+}
+.tienNuoc {
+  display: flex;
+  align-items: center;
+}
+.internet {
+  display: flex;
+  align-items: center;
+}
+.coChoDeXe {
+  display: flex;
+  align-items: center;
 }

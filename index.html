@@ -1,130 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="js/service/RoomService.js"></script>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="css/component.css">
-    <link rel="stylesheet" href="css/style1.css">
-    <script src="https://kit.fontawesome.com/b7a754bad9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="js/service/RoomService.js"></script>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="css/component.css">
+        <link rel="stylesheet" href="css/style1.css">
+        <script src="https://kit.fontawesome.com/b7a754bad9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic">
+    </head>
 
-<body>
-    <header>
-        <!-- Phần tải xuống và đăng phòng -->
-        <div class="hd_menu">
-            <div class="khung_menu">
-                <i class="fas fa-download"><span class="download">Tải APP</span></i>
-                <i class="fas fa-home"><span class="icon_home">Đăng phòng dễ dàng </span></i>
+    <body>
+        <header>
+            <!-- Phần tải xuống và đăng phòng -->
+            <div class="hd_menu">
+                <div class="khung_menu">
+                    <i class="fas fa-download"><span class="download">Tải APP</span></i>
+                    <i class="fas fa-home"><span class="icon_home">Đăng phòng dễ dàng </span></i>
+                </div>
             </div>
-        </div>
-        <!-- Phần Logo và tìm kiếm -->
-        <div class="khung_LG1">
-            <div class="khung_LG2">
-                <div class="khung_LG-sh">
-                    <div class="loGo"><img src="https://www.ohanaliving.vn/8cc95480cbd2708db10ad4b8de56306a.svg"
-                            alt="#"></div>
-                    <!-- Khung tìm kiếm và nới trong 2 tỉnh thành -->
-                    <div class="khung_sh ">
-                        <div class="sh_left">
-                            <i class="fas fa-map-marker-alt" style="color:var(--primary-color);"> <select
-                                    name="tinhThanh" id="tinhThanh">
-                                    <option value="TP.HCM">TP.HCM</option>
-                                    <option value="TP Hà Nội">TP Hà Nội</option>
+            <!-- Phần Logo và tìm kiếm -->
+            <div class="khung_LG1">
+                <div class="khung_LG2">
+                    <div class="khung_LG-sh">
+                        <div class="loGo"><img src="https://www.ohanaliving.vn/8cc95480cbd2708db10ad4b8de56306a.svg"
+                                alt="#"></div>
+                        <!-- Khung tìm kiếm và nới trong 2 tỉnh thành -->
+                        <div class="khung_sh ">
+                            <div class="sh_left">
+                                <i class="fas fa-map-marker-alt" style="color:var(--primary-color);"> <select
+                                        name="tinhThanh" id="tinhThanh">
+                                        <option value="TP.HCM">TP.HCM</option>
+                                        <option value="TP Hà Nội">TP Hà Nội</option>
 
-                                </select></i>
+                                    </select></i>
+                            </div>
+                            <div class="sh_right">
+                                <input type="search" id="search"
+                                    placeholder="Tìm kiếm theo địa điểm, quận , tên đường...">
+                            </div>
+                            <div class="icon_sh">
+                                <span><i class="fas fa-search-location"></i></span>
+                            </div>
                         </div>
-                        <div class="sh_right">
-                            <input type="search" id="search" placeholder="Tìm kiếm theo địa điểm, quận , tên đường...">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Khung bên trái  -->
+            <div class="left_frame">
+                <ul class="fs-24 fw-400">
+                    <li class="fs-24">
+                        Bộ Lọc <button type="button" class="btn-medium fs-16 btn-outline-secondary"><span>Áp
+                                Dụng</span></button>
+                    </li>
+                    <li class="fs-20">Giá</li>
+                    <li class="fs-20">Tiện ích</li>
+                    <li class="fs-20">Loại phòng</li>
+                    <li class="fs-20">Giới tính </li>
+                    <li class="fs-20 cl-secondary">Áp dụng</li>
+                </ul>
+
+            </div>
+            <!-- Khung bên phải -->
+            <div class="right_frame">
+                <div class="khungKetQua">
+                    <span class="tt_kq fs-24 fw-400">Kết Quả</span>
+                </div>
+                <div class="khungDanhSachPhongTro">
+                    <div class="anh">
+                        <a href="#">
+                            <img src="https://bayleaf.s3.amazonaws.com/property-images%2F1590804175320_IMG_3712.JPG"
+                                alt="OHANA">
+                        </a>
+                    </div>
+                    <div class="tTPhong ">
+                        <p class="fs-20 fw-400">Phòng cho thuê Đinh Tiên Hoàng, Quận Bình Thạnh - 0966332775</p>
+                        <div class="fr_chiTiet">
+                            <span class="kieuPhong fs-16 cl-information"><i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;&nbsp;Thuê</span>
+                            <div class="gioiTinhVaDienTich">
+                                <span class="gioiTinh fs-16 cl-information"><i class="fas fa-venus-mars"></i>Nam</span>
+                                <span class="dienTich fs-16 cl-information"><i class="fas fa-ruler"></i>40m2</span>
+                            </div>
+                            <span class="diaChi fs-16 cl-information"><i class="fas fa-map-marked"></i>&nbsp;&nbsp;&nbsp;&nbsp;TPHCM</span>
                         </div>
-                        <div class="icon_sh">
-                            <span><i class="fas fa-search-location"></i></span>
+
+                    </div>
+                    <div class="tTgia cl-price">
+                        <span class="fs-48 fw-400 cl-price">4,5</span>
+                        <span class="fs-16 fw-400 cl-price">tr/phòng</span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <!-- <footer>
+            <div class="fr">
+                <div class="fe_center">
+                    <div class="fe_top">
+                        <img src="https://www.ohanaliving.vn/5a087bcc3917e489e3d6b7e58cb9b113.svg" alt="">
+                        <div class="fr_dow">
+                            <a
+                                href="https://apps.apple.com/vn/app/ohana-t%C3%ACm-%E1%BB%9F-gh%C3%A9p-ph%C3%B2ng-tr%E1%BB%8D/id1236240154?l=vi"><img
+                                    width="172px" height="52px"
+                                    src="https://www.ohanaliving.vn/3f9605492bb7388bbc16f25a16778cbc.png"></a>
+
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.bayleaf_mobile&referrer=utm_source%3DOhana-web%26utm_medium%3Dandroid-button%26utm_campaign%3DDown-Ohana-app-from-web%26anid%3Dadmob"><img
+                                    width="172px" height="52px"
+                                    src="https://www.ohanaliving.vn/137381da1471b1c2ad438c213a34b0a4.png"></a>
+                        </div>
+                    </div>
+                    <div class="fr_day">
+                        <div class="fr_title fs-16">
+                            <a href="#"><span>Điều khoản và chính sách</span></a>
+                        </div>
+                        <div class="fr_tt">
+                            <a href="#"><span>Copyright © DOONG.CO PTE. LTD - 2018 All Rights Reserved
+                                </span></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <!-- Khung bên trái  -->
-        <div class="left_frame">
-            <ul class="fs-24 fw-400">
-                <li class="fs-24">
-                    Bộ Lọc <button type="button" class="btn-medium fs-16 btn-outline-secondary"><span>Áp
-                            Dụng</span></button>
-                </li>
-                <li class="fs-20">Giá</li>
-                <li class="fs-20">Tiện ích</li>
-                <li class="fs-20">Loại phòng</li>
-                <li class="fs-20">Giới tính </li>
-                <li class="fs-20 cl-secondary">Áp dụng</li>
-            </ul>
+        </footer> -->
+    </body>
+    <script>
+        function listPhong() {
+            
+            
 
-        </div>
-        <!-- Khung bên phải -->
-        <div class="right_frame">
-            <div class="khungKetQua">
-                <span class="tt_kq fs-24 fw-400">Kết Quả</span>
-            </div>
-            <div class="khungDanhSachPhongTro">
-                <div class="anh">
-                    <a href="#">
-                        <img src="https://bayleaf.s3.amazonaws.com/property-images%2F1590804175320_IMG_3712.JPG"
-                            alt="OHANA">
-                    </a>
-                </div>
-                <div class="tTPhong ">
-                    <p class="fs-20 fw-400">Phòng cho thuê Đinh Tiên Hoàng, Quận Bình Thạnh - 0966332775</p>
-                    <div class="fr_chiTiet">
-                        <span class="kieuPhong fs-16 cl-information"><i class="fas fa-home"></i>thuê</span>
-                        <span class="gioiTinh fs-16 cl-information"><i class="fas fa-venus-mars"></i>Nam</span>
-                        <span class="dienTich fs-16 cl-information"><i class="fas fa-ruler"></i>40m2</span>
-                        <span class="diaChi fs-16 cl-information"><i class="fas fa-map-marked"></i>TPHCM</span>
-                    </div>
-
-                </div>
-                <div class="tTgia cl-price">
-                    <span class="fs-48 fw-400 cl-price">4,5</span>
-                    <span class="fs-16 fw-400 cl-price">tr/phòng</span>
-                </div>
-            </div>
-        </div>
-
-    </main>
-    <footer>
-        <div class="fr">
-            <div class="fe_center">
-                <div class="fe_top">
-                    <img src="https://www.ohanaliving.vn/5a087bcc3917e489e3d6b7e58cb9b113.svg" alt="">
-                    <div class="fr_dow">
-                        <a
-                            href="https://apps.apple.com/vn/app/ohana-t%C3%ACm-%E1%BB%9F-gh%C3%A9p-ph%C3%B2ng-tr%E1%BB%8D/id1236240154?l=vi"><img
-                                width="172px" height="52px"
-                                src="https://www.ohanaliving.vn/3f9605492bb7388bbc16f25a16778cbc.png"></a>
-
-                        <a
-                            href="https://play.google.com/store/apps/details?id=com.bayleaf_mobile&referrer=utm_source%3DOhana-web%26utm_medium%3Dandroid-button%26utm_campaign%3DDown-Ohana-app-from-web%26anid%3Dadmob"><img
-                                width="172px" height="52px"
-                                src="https://www.ohanaliving.vn/137381da1471b1c2ad438c213a34b0a4.png"></a>
-                    </div>
-                </div>
-                <div class="fr_day">
-                    <div class="fr_title fs-16">
-                        <a href="#"><span>Điều khoản và chính sách</span></a>
-                    </div>
-                    <div class="fr_tt">
-                        <a href="#"><span>Copyright © DOONG.CO PTE. LTD - 2018 All Rights Reserved
-                            </span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-
+        }
+    </script>
 </html>
