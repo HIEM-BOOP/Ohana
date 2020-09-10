@@ -214,21 +214,19 @@
                 nodePopup.style.display = 'grid';
             }
             function next() {
+                viTriHienTai ++; /* = viTriHienTai + 1; */
                 console.log(viTriHienTai);
-                viTriHienTai = viTriHienTai + 1;
                 if (viTriHienTai >= phongCanHienThi.hinhAnh.length)
                     viTriHienTai = 0;
                 displayPopupImage(viTriHienTai);
             }
             function prev() {
-                console.log(viTriHienTai);
-                for (var i = 0; i < viTriHienTai.length; i++){
-                    if (viTriHienTai[i] < 0 )
-                    viTriHienTai[i] = 3;
-                    else 
-                    viTriHienTai[i] = 0;
-                }
-                
+               console.log(viTriHienTai);
+               viTriHienTai --;
+               if (viTriHienTai < 0) {
+                   viTriHienTai =  phongCanHienThi.hinhAnh.length - 1; 
+               }
+               displayPopupImage(viTriHienTai); 
             }
 
             function anPopupImages() {

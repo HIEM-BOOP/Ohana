@@ -36,7 +36,7 @@ header {
 .khung_menu i {
   padding: 0 5px;
 }
-.icon_sh i {
+#icon_sh i {
   color: var(--primary-color);
 }
 .khung_LG1 {

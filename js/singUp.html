@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/component.css">
+        <title>Đăng nhập</title>
+        
+        <style>
+            body {
+                background: #001a33;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            .box {
+                margin-top: 10%;
+                width: 400px;
+                padding: 40px;
+                position: absolute;
+                top: 0%;
+                /* bottom: 50%; */
+                left: 40%;
+                transform: translateX(-50%, -50%);
+                background-color: white;
+                text-align: center;
+                border-radius: 15px;
+            }
+
+            .box input[type="text"],
+            .box input[type="password"] {
+                border: 0;
+                background: none;
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+                border: 2px solid var(--primary-color);
+                padding: 14px 10px;
+                width: 200px;
+                outline: none;
+                color: #000;
+                border-radius: 30px;
+                transition: 0.25s;
+            }
+
+            .box h1 {
+                text-transform: uppercase;
+                color: var(--primary-color);
+            }
+
+            .box h1:hover {
+                transform: rotate(45deg);
+
+            }
+
+            .box [type="submit"] {
+                padding: 10px 20px;
+                border: 0;
+                border: 2px solid var(--primary-color);
+                border-radius: 30px;
+                outline: none;
+                color: #000;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border-radius: 30px;
+                transition: 0.25s;
+            }
+
+            .box input[type="submit"]:hover {
+                background-color: var(--primary-color);
+                transition: 1.5s;
+                outline: none;
+            }
+
+            .box input[type="text"]:hover {
+                width: 300px;
+                transition: 1.5s;
+            }
+
+            .box input[type="password"]:hover {
+                width: 300px;
+                transition: 0.3s;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <form id="login-form" action="index.php" class="box" name="form" action="" method="post">
+            <h1>LOGIN</h1>
+            <input type="text" name="ten" id="ten" placeholder="Username" /><span id="erruser"  ></span>
+            <input type="password" name="pass" id="pass"  placeholder="Password" /><span id="errpass"></span>
+            <input  type="submit" name="tsubmit" id="tsubmit" value="Đăng nhập" />
+        </form>
+        <script>
+           function kiemtra(e) {
+                e.preventDefault();
+                var user = document.getElementById("ten");
+                var password = document.getElementById("pass");
+                if (user.value == "") {
+                    document.getElementById("erruser").innerHTML = "Tên đăng nhập rỗng";
+                    user.style.background = "red";
+
+                }
+                else if (user.value != "" && password.value != "hiem2001") {
+                    document.getElementById("errpass").innerHTML = "Mật khẩu là hiem2001";
+                    password.style.background = "red";
+                }
+                else if(user.value == "hiemcute" && password.value == 'hiem2001' ){
+                    alert('Đăng nhập thành công!')
+                    window.location.href = '/thongTin.html';
+                }
+
+            }
+
+            var form = document.getElementById('login-form');
+            form.addEventListener('submit', kiemtra, false);
+        </script>
+    </body>
+
+</html>

@@ -40,12 +40,11 @@
 
                                     </select></i>
                             </div>
-                            <div class="sh_right">
-                                <input type="search" id="search"
-                                    placeholder="Tìm kiếm theo địa điểm, quận , tên đường...">
+                            <div id="sh_right">
+
                             </div>
-                            <div class="icon_sh">
-                                <span><i class="fas fa-search-location"></i></span>
+                            <div id="icon_sh">
+
                             </div>
                         </div>
                     </div>
@@ -132,38 +131,79 @@
 
 
 
+        // Hiện thị các danh sách html 
+
+        var dsPhong = localStorage.getItem("dsPhong");
+        var dsPhongArray = JSON.parse(local);
+        console.log(dsPhongArray);
+        listDanhSachPhong(dsPhongArray);
+
+        // var timKiem = document.getElementById('sh_right');
+        search();
+        function search() {
+            html = `<input type="search" id="search"
+                                    placeholder="Tìm kiếm theo địa điểm, quận , tên đường...">`
+            var nodeSeacrch = document.getElementById('sh_right');
+            nodeSeacrch.innerHTML = html;
 
 
+        }
+        iconSearch();
+        function iconSearch() {
+            html = `<span><i onclick="onClickSearch()" class="fas fa-search-location"></i></span>`
+            var nodeiconSearch = document.getElementById('icon_sh');
+            nodeiconSearch.innerHTML = html;
+
+        }
         var local = localStorage.getItem("dsPhong");
-        var oject = JSON.parse(local);
-        console.log(oject[0].soDienThoai);
-        listDanhSachPhong();
 
-        function listDanhSachPhong() {
+        var ojectSearch = JSON.parse(local);
+
+        function onClickSearch() {
+            // lấy cái người dùng nhập từ input
+            var timKiem = document.getElementById('search').value;
+            console.log(timKiem);
+
+            // tạo mảng rổng để push sp tìm được vào
+            danhSachCanTimKiem = [];
+            console.log(ojectSearch);
+            // Tìm được và push vào mảng listDanhCanTimKiem
+            for (var i = 0; i < ojectSearch.length; i++) {
+                console.log(ojectSearch[i].tieuDe.includes(timKiem));
+                if (ojectSearch[i].tieuDe.includes(timKiem) == true)
+
+                    danhSachCanTimKiem.push(ojectSearch[i]);
+                console.log(danhSachCanTimKiem);
+            }
+            // Hiển thị danh sách vừa tìm kiếm được
+            listDanhSachPhong(danhSachCanTimKiem);
+        }
+
+        function listDanhSachPhong(listRoom) {
             var htmlAll = "";
-            for (var i = 0; i < oject.length; i++) {
+            for (var i = 0; i < listRoom.length; i++) {
 
                 var html = ` 
-                <a class='cl-primary' href="/index1.html?id=${oject[i].id}">
+                <a class='cl-primary' href="/index1.html?id=${listRoom[i].id}">
                 <div class="anh">
-                        <img src="${oject[i].hinhAnh[0]}"
+                        <img src="${listRoom[i].hinhAnh[0]}"
                         alt="OHANA">
                         </div>
                         <div class="tTPhong ">
-                            <p class="fs-20 fw-400">${oject[i].tieuDe}</p>
+                            <p class="fs-20 fw-400">${listRoom[i].tieuDe}</p>
                             <div class="fr_chiTiet">
-                                <span class="kieuPhong fs-16 cl-information"><i class="fas fa-home"></i>&nbsp;${oject[i].loai_phong}</span>
+                                <span class="kieuPhong fs-16 cl-information"><i class="fas fa-home"></i>&nbsp;${listRoom[i].loai_phong}</span>
                                 <div class="gioiTinhVaDienTich">
-                                    <span class="gioiTinh fs-16 cl-information"><i class="fas fa-venus-mars"></i>${oject[i].gender}</span>
-                                    <span class="dienTich fs-16 cl-information"><i class="fas fa-ruler"></i>${oject[i].dienTich}&nbsp;m2</span>
+                                    <span class="gioiTinh fs-16 cl-information"><i class="fas fa-venus-mars"></i>${listRoom[i].gender}</span>
+                                    <span class="dienTich fs-16 cl-information"><i class="fas fa-ruler"></i>${listRoom[i].dienTich}&nbsp;m2</span>
                                     </div>
-                                    <span class="diaChi fs-16 cl-information"><i class="fas fa-map-marked"></i>&nbsp;${oject[i].city}</span>
+                                    <span class="diaChi fs-16 cl-information"><i class="fas fa-map-marked"></i>&nbsp;${listRoom[i].city}</span>
                                     </div>
                                     
                                     </a>
                                     </div>
                                     <div class="tTgia cl-price">
-                                        <span class="fs-48 fw-400 cl-price">${oject[i].giaChoThue}</span>
+                                        <span class="fs-48 fw-400 cl-price">${listRoom[i].giaChoThue}</span>
                                         <span class="fs-16 fw-400 cl-price">tr/phòng</span>
                                         </div>
                                        `;
@@ -173,6 +213,7 @@
             document.getElementById('khungDanhSachPhongTro').innerHTML = htmlAll;
 
         }
+
     </script>
 
 </html>
